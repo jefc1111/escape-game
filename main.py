@@ -64,6 +64,7 @@ while running:
 
     pygame.draw.circle(screen, BLACK, [50, 50], 10)
 
+    pygame.draw.aalines(screen, BLUE, False, [[0, 80], [50, 90], [200, 80], [220, 30]])
 
     screen.blit(hello_paul, (20, 20))
     # after drawing, flip the display
