@@ -3,6 +3,7 @@
 # KidsCanCode 2015
 import pygame
 import random
+import os
 
 # define some colors (R, G, B)
 WHITE = (255, 255, 255)
@@ -46,6 +47,8 @@ running = True
 font = pygame.font.SysFont(None, 24)
 hello_paul = font.render('Hello Paul :)', True, BLUE)
 
+sad_baby = pygame.image.load(os.path.join('assets/images', 'baby.jpg'))
+
 
 while running:
     # keep the loop running at the right speed
@@ -67,6 +70,8 @@ while running:
     pygame.draw.aalines(screen, BLUE, False, [[0, 80], [50, 90], [200, 80], [220, 30]])
 
     screen.blit(hello_paul, (20, 20))
+
+    screen.blit(sad_baby, (100, 100))
     # after drawing, flip the display
     pygame.display.flip()
 
