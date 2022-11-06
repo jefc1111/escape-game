@@ -6,5 +6,5 @@ A collaborative project as an exercise in a small group of adults and children l
 
 To get up and running I did;  
 `python3 -m pip install --user pipenv`  
-`pipenv install pygame`  
+`pipenv install pygame` (I think you can do `pipenv run pipenv install` instead now that there is a `Pipfile.lock`)  
 `pipenv run python main.py`
