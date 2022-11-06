@@ -24,7 +24,7 @@ ORANGE = (255, 128, 0)
 CYAN = (0, 255, 255)
 
 # basic constants to set up your game
-WIDTH = 360
+WIDTH = 640
 HEIGHT = 480
 FPS = 30
 BGCOLOR = WHITE
