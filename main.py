@@ -3,6 +3,7 @@
 # KidsCanCode 2015
 import pygame
 import random
+import os
 
 # define some colors (R, G, B)
 WHITE = (255, 255, 255)
@@ -24,7 +25,7 @@ ORANGE = (255, 128, 0)
 CYAN = (0, 255, 255)
 
 # basic constants to set up your game
-WIDTH = 360
+WIDTH = 640
 HEIGHT = 480
 FPS = 30
 BGCOLOR = WHITE
@@ -46,7 +47,13 @@ running = True
 font = pygame.font.SysFont(None, 24)
 hello_paul = font.render('Hello Paul :)', True, BLUE)
 
+sad_baby = pygame.image.load(os.path.join('assets/images', 'baby.jpg'))
 
+guitar = pygame.mixer.Sound(os.path.join('assets/sounds', 'guitar.wav'))
+
+pygame.mixer.Sound.play(guitar)
+
+i = 0
 while running:
     # keep the loop running at the right speed
     clock.tick(FPS)
@@ -64,10 +71,18 @@ while running:
 
     pygame.draw.circle(screen, BLACK, [50, 50], 10)
 
+    pygame.draw.aalines(screen, BLUE, False, [[0, 80], [50, 90], [200, 80], [220, 30]])
 
     screen.blit(hello_paul, (20, 20))
+
+    screen.blit(sad_baby, (-450 + (i * 3), -450 + (i * 3)))
     # after drawing, flip the display
     pygame.display.flip()
+
+    if i < 270:
+      i += 1
+    else:
+      i = 0
 
 # close the window
 pygame.quit()
