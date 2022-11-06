@@ -1,7 +1,7 @@
 # escape-game
 A mystery / room escape game
 
-A collaborative project as an exercise in a small group of adults and children learning Python together. 
+A collaborative project for a small group of adults and children learning Python together. 
 
 
 To get up and running I did;  
