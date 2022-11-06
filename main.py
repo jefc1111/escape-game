@@ -49,7 +49,7 @@ hello_paul = font.render('Hello Paul :)', True, BLUE)
 
 sad_baby = pygame.image.load(os.path.join('assets/images', 'baby.jpg'))
 
-
+i = 0
 while running:
     # keep the loop running at the right speed
     clock.tick(FPS)
@@ -71,9 +71,11 @@ while running:
 
     screen.blit(hello_paul, (20, 20))
 
-    screen.blit(sad_baby, (100, 100))
+    screen.blit(sad_baby, (-420 + (i * 3), -420 + (i * 3)))
     # after drawing, flip the display
     pygame.display.flip()
+
+    i += 1
 
 # close the window
 pygame.quit()
