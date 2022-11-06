@@ -49,6 +49,10 @@ hello_paul = font.render('Hello Paul :)', True, BLUE)
 
 sad_baby = pygame.image.load(os.path.join('assets/images', 'baby.jpg'))
 
+guitar = pygame.mixer.Sound(os.path.join('assets/sounds', 'guitar.wav'))
+
+pygame.mixer.Sound.play(guitar)
+
 i = 0
 while running:
     # keep the loop running at the right speed
@@ -71,11 +75,14 @@ while running:
 
     screen.blit(hello_paul, (20, 20))
 
-    screen.blit(sad_baby, (-420 + (i * 3), -420 + (i * 3)))
+    screen.blit(sad_baby, (-450 + (i * 3), -450 + (i * 3)))
     # after drawing, flip the display
     pygame.display.flip()
 
-    i += 1
+    if i < 270:
+      i += 1
+    else:
+      i = 0
 
 # close the window
 pygame.quit()
