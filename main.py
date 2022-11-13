@@ -27,7 +27,7 @@ CYAN = (0, 255, 255)
 WIDTH = 360
 HEIGHT = 480
 FPS = 30
-BGCOLOR = ORANGE
+BGCOLOR = TEAL
 
 # initialize pygame
 pygame.init()
