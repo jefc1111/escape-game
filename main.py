@@ -27,7 +27,7 @@ CYAN = (0, 255, 255)
 WIDTH = 360
 HEIGHT = 480
 FPS = 30
-BGCOLOR = WHITE
+BGCOLOR = ORANGE
 
 # initialize pygame
 pygame.init()
@@ -44,7 +44,7 @@ running = True
 # start the game loop
 
 font = pygame.font.SysFont(None, 24)
-hello_paul = font.render('Hello Paul :)', True, BLUE)
+hello_paul = font.render('Hello Paul :)', True, BLUE) 
 
 
 while running:
@@ -63,7 +63,7 @@ while running:
     screen.fill(BGCOLOR)
 
     pygame.draw.circle(screen, BLACK, [50, 50], 10)
-
+    pygame.draw.line(screen,GREEN,(20,20),(100,80),3)
 
     screen.blit(hello_paul, (20, 20))
     # after drawing, flip the display
